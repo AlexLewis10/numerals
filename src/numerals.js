@@ -7,12 +7,12 @@ export default class Numerals {
     if (number >= 50) {
       let multiplier = this.calculateMultiplier(number, 50)
       this.addToArray(multiplier, "L")
-      number = number - (multiplier * 50)
+      number = this.calculateNewNumber(number, multiplier, 50)
     }
     if (number >= 10 && number < 50) {
       let multiplier = this.calculateMultiplier(number, 10)
       this.addToArray(multiplier, "X")
-      number = number - (multiplier * 10)
+      number = this.calculateNewNumber(number, multiplier, 10)
     }
     if (number >= 5 && number < 10) {
       number = number - 5
@@ -36,6 +36,10 @@ export default class Numerals {
 
   calculateMultiplier (number, numeralValue) {
     return Math.floor(number / numeralValue)
+  }
+
+  calculateNewNumber (number, multiplier, numeralValue) {
+    return number - (multiplier * numeralValue)
   }
 }
 
