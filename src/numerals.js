@@ -4,13 +4,16 @@ export default class Numerals {
   }
 
   convert (number) {
-
-    if (number >= 10) {
+    if (number >= 50) {
+      let multiplier = Math.floor(number / 50)
+      this.addToArray(multiplier, "L")
+      number = number - (multiplier * 50)
+    }
+    if (number >= 10 && number < 50) {
       let multiplier = Math.floor(number / 10)
       this.addToArray(multiplier, "X")
       number = number - (multiplier * 10)
     }
-    
     if (number >= 5 && number < 10) {
       number = number - 5
       this.numeralsArray.push("V")
