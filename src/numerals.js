@@ -4,6 +4,7 @@ export default class Numerals {
     let numeralsArray = []
 
     if (number >= 5) {
+      number = number - 5
       numeralsArray.push("V")
     }
     if (number < 5) {
