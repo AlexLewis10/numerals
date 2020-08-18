@@ -3,7 +3,7 @@ export default class Numerals {
   convert (number) {
     let numeralsArray = []
 
-    if (number % 5 === 0) {
+    if (number === 5) {
       numeralsArray.push("V")
     } else if (number < 5 && number < (5 - 1)) {
       for(let i = 0; i < number; i++) {
