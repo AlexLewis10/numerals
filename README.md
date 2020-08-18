@@ -1,5 +1,5 @@
 ## Numerals
-A simple kata for some TDD practice using nodeJS and jest.
+A simple kata for some TDD practice using nodeJS and Jest.
 
 ### The Brief
 Write a method that takes a number and converts it to the according String representation.
