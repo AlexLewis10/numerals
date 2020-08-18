@@ -6,8 +6,4 @@ beforeEach(() => {
   numerals = new Numerals()
 })
 
-describe('Numerals', () => {
-  it('says hello', () => {
-    expect(numerals.hello()).toStrictEqual('Hello')
-  })
-})
+
