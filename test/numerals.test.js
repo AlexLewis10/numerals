@@ -39,8 +39,12 @@ describe('Converts a number to a string', () => {
     expect(numerals.convert(25)).toStrictEqual("XXV")
   })
 
-  it('when given the number 50 return "L', () => {
+  it('when given the number 55 return "LV"', () => {
     expect(numerals.convert(55)).toStrictEqual("LV")
+  })
+
+  it('when given the number 135 return "CXXXV"', () => {
+    expect(numerals.convert(135)).toStrictEqual("CXXXV")
   })
 })
 

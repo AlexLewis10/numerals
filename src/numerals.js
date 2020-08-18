@@ -6,7 +6,13 @@ export default class Numerals {
   convert (number) {
     let multiplier = 0
 
-    if (number >= 50) {
+    if (number >= 100) {
+      multiplier = this.calculateMultiplier(number, 100)
+      this.addToArray(multiplier, "C")
+      number = this.calculateNewNumber(number, multiplier, 100)
+    }
+    
+    if (number >= 50 && number < 100) {
       multiplier = this.calculateMultiplier(number, 50)
       this.addToArray(multiplier, "L")
       number = this.calculateNewNumber(number, multiplier, 50)
@@ -29,6 +35,8 @@ export default class Numerals {
     const joinedNumerals = this.numeralsArray.join("")
     return joinedNumerals
   }
+
+
 
   addToArray (multiplier, numeral) {
     for(let i = 0; i < multiplier; i++) {
