@@ -22,3 +22,11 @@ Examples
 Hint
 
 This kata lures a lot of people to implement features in the order of the numbers. But do not forget that it’s sometimes easier to start with a general case and add exceptions later.
+
+| INPUT | OUTPUT |
+|--|--|
+| 1 | "I" |
+| 2 | "II" |
+| 5 | "V" |
+| 4 | "IV" |
+
