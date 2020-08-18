@@ -2,14 +2,18 @@ export default class Numerals {
 
   convert (number) {
     let numeralsArray = []
-    if (number < 5) {
+
+    if (number % 5 === 0) {
+      numeralsArray.push("V")
+    } else if (number < 5 && number < (5 - 1)) {
       for(let i = 0; i < number; i++) {
         numeralsArray.push("I")
       }
+    } else {
+      numeralsArray.push("IV")
     }
-    if (number === 5) {
-      return "V"
-    }
+
+    console.log(numeralsArray)
     const joinedNumerals = numeralsArray.join("")
     return joinedNumerals
   }

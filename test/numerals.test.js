@@ -18,6 +18,10 @@ describe('Converts a number to a string', () => {
   it('when given the number 5 return "V"', () => {
     expect(numerals.convert(5)).toStrictEqual("V")
   })
+
+  it('when given the number 4 return "IV"', () => {
+    expect(numerals.convert(4)).toStrictEqual("IV")
+  })
 })
 
 
