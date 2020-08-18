@@ -3,7 +3,10 @@ export default class Numerals {
   convert (number) {
     let numeralsArray = []
 
-    if (number >= 5) {
+    if (number >= 10) {
+      numeralsArray.push("X")
+    }
+    if (number >= 5 && number < 10) {
       number = number - 5
       numeralsArray.push("V")
     }
