@@ -4,13 +4,15 @@ export default class Numerals {
   }
 
   convert (number) {
+    let multiplier = 0
+
     if (number >= 50) {
-      let multiplier = this.calculateMultiplier(number, 50)
+      multiplier = this.calculateMultiplier(number, 50)
       this.addToArray(multiplier, "L")
       number = this.calculateNewNumber(number, multiplier, 50)
     }
     if (number >= 10 && number < 50) {
-      let multiplier = this.calculateMultiplier(number, 10)
+      multiplier = this.calculateMultiplier(number, 10)
       this.addToArray(multiplier, "X")
       number = this.calculateNewNumber(number, multiplier, 10)
     }
@@ -19,7 +21,7 @@ export default class Numerals {
       this.numeralsArray.push("V")
     }
     if (number < 5) {
-      let multiplier = number / 1
+      multiplier = number / 1
       this.addToArray(multiplier, "I")
     }
     
