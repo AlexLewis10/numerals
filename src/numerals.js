@@ -1,30 +1,34 @@
 export default class Numerals {
+  constructor () {
+    this.numeralsArray = []
+  }
 
   convert (number) {
-    let numeralsArray = []
 
     if (number >= 10) {
       let multiplier = Math.floor(number / 10)
-      for(let i = 0; i < multiplier; i++) {
-        numeralsArray.push("X")
-      }
+      this.addToArray(multiplier, "X")
       number = number - (multiplier * 10)
     }
-    console.log(number)
+    
     if (number >= 5 && number < 10) {
       number = number - 5
-      numeralsArray.push("V")
+      this.numeralsArray.push("V")
     }
     if (number < 5) {
       let multiplier = number / 1
-      for(let i = 0; i < multiplier; i++) {
-        numeralsArray.push("I")
-      }
+      this.addToArray(multiplier, "I")
     }
-
-
+    
     // console.log(numeralsArray)
-    const joinedNumerals = numeralsArray.join("")
+    const joinedNumerals = this.numeralsArray.join("")
     return joinedNumerals
   }
+
+  addToArray (multiplier, numeral) {
+    for(let i = 0; i < multiplier; i++) {
+      this.numeralsArray.push(numeral)
+    }
+  }
 }
+
