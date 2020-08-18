@@ -4,7 +4,10 @@ export default class Numerals {
     let numeralsArray = []
 
     if (number >= 10) {
-      numeralsArray.push("X")
+      let multiplier = number / 10
+      for(let i = 0; i < multiplier; i++) {
+        numeralsArray.push("X")
+      }
     }
     if (number >= 5 && number < 10) {
       number = number - 5
